@@ -216,3 +216,22 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# --- Hadamard-LLM Specific Additions ---
+# Local Vector Databases & Cache
+.chroma/
+.pinecone/
+*.db
+*.sqlite3
+
+# Quantum Simulation Cache (Qiskit / PennyLane runtime logs)
+.qiskit/
+.pennylane/
+*.qpy
+quantum_circuit.png
+
+# Package configuration overrides
+.pdm.toml
+.python-version
+
