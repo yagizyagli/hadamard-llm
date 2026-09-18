@@ -37,13 +37,13 @@ Hadamard-LLM adapts dynamically to your production requirements. Choose the envi
 ### 1. Production Mode (Classic LLM Orchestration Only)
 Installs only the blazing-fast core runtime engine with a minimal system footprint.
 ```bash
-pip install https://github.com/yagizyagli/hadamard-llm
+pip install git+https://github.com/yagizyagli/hadamard-llm
 ```
 
 ### 2. Quantum Research Mode (Full QML Subsystem Enabled)
 Installs the classic core along with heavy mathematical simulation primitives (`pennylane`, `qiskit`).
 ```bash
-pip install "hadamard-llm[quantum] @https://github.com/yagizyagli/hadamard-llm
+pip install "hadamard-llm[quantum] @ git+https://github.com/yagizyagli/hadamard-llm
 ```
 
 ### 3. Local Development & Contributor Sandbox
