@@ -43,7 +43,7 @@ pip install git+https://github.com/yagizyagli/hadamard-llm
 ### 2. Quantum Research Mode (Full QML Subsystem Enabled)
 Installs the classic core along with heavy mathematical simulation primitives (`pennylane`, `qiskit`).
 ```bash
-pip install "hadamard-llm[quantum] @git+https://github.com/yagizyagli/hadamard-llm
+pip install "hadamard-llm[quantum] @ git+https://github.com/yagizyagli/hadamard-llm
 ```
 
 ### 3. Local Development & Contributor Sandbox
