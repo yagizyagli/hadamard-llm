@@ -3,7 +3,7 @@ Hadamard-LLM Core Engine
 An ultra-lightweight, asynchronous LLM orchestration framework.
 """
 
-from core.models import (
+from .models import (
     BaseModel,
     OpenAIModel,
     AnthropicModel,
@@ -14,9 +14,9 @@ from core.models import (
     GrokModel,
 )
 
-from core.prompts.template import PromptTemplate
-from core.memory.window import BufferWindowMemory
-from core.parsers.json_parser import SimpleJsonParser
+from .prompts.template import PromptTemplate
+from .memory.window import BufferWindowMemory
+from .parsers.json_parser import SimpleJsonParser
 
 __version__ = "0.1.0"
 
