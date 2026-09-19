@@ -1,11 +1,11 @@
-from .base import BaseModel
-from .openai import OpenAIModel
-from .anthropic import AnthropicModel
-from .gemini import GeminiModel
-from .ollama import OllamaModel
-from .groq import GroqModel
-from .deepseek import DeepSeekModel
-from .grok import GrokModel
+from core.models.base import BaseModel
+from core.models.openai import OpenAIModel
+from core.models.anthropic import AnthropicModel
+from core.models.gemini import GeminiModel
+from core.models.ollama import OllamaModel
+from core.models.groq import GroqModel
+from core.models.deepseek import DeepSeekModel
+from core.models.grok import GrokModel
 
 __all__ = [
     "BaseModel", 
