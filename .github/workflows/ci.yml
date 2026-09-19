@@ -34,4 +34,4 @@ jobs:
 
     - name: Execute Automated Test Matrix
       run: |
-        pytest
+        python -m pytest
