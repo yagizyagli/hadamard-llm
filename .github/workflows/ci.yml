@@ -28,11 +28,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install httpx>=0.27.0 pytest>=8.0.0 pytest-asyncio>=0.24.0
 
-    - name: Install Pre-Built Quantum Optimization Core
-      run: |
-        # Using the official plugin installer avoids triggering heavy, uncompiled local wheel builds
-        pip install pennylane-qiskit
-
     - name: Execute Automated Test Matrix
       run: |
         python -m pytest
