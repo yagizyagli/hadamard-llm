@@ -2,15 +2,13 @@ import os
 import sys
 import pytest
 
-# Force override Python's lookup path matrix to include local folders directly
+# Explicit path enjection override
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PARENT_DIR = os.path.dirname(CURRENT_DIR)
-
 if PARENT_DIR not in sys.path:
     sys.path.insert(0, PARENT_DIR)
-if os.path.join(PARENT_DIR, "core") not in sys.path:
-    sys.path.insert(0, os.path.join(PARENT_DIR, "core"))
 
+# Directly access the source files bypassing dynamic package lookup bottlenecks
 from core.prompts.template import PromptTemplate
 from core.exceptions import PromptTemplateError
 
