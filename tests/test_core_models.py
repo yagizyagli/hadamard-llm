@@ -2,13 +2,15 @@ import os
 import sys
 import pytest
 
-# Absolute path resolution mapping
+# Force override Python's lookup path matrix to include local folders directly
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PARENT_DIR = os.path.dirname(CURRENT_DIR)
+
 if PARENT_DIR not in sys.path:
     sys.path.insert(0, PARENT_DIR)
+if os.path.join(PARENT_DIR, "core") not in sys.path:
+    sys.path.insert(0, os.path.join(PARENT_DIR, "core"))
 
-# Directly pull from local folder path structure
 from core.models.openai import OpenAIModel
 from core.exceptions import MissingAPIKeyError
 
@@ -32,5 +34,5 @@ def test_openai_payload_builder():
     assert payload["model"] == "gpt-4o"
     assert payload["temperature"] == 0.2
     assert len(payload["messages"]) == 2
-    assert payload["messages"][0]["role"] == "system"
-    assert payload["messages"][1]["role"] == "user"
+    assert payload["messages"]["role"] == "system"
+    assert payload["messages"]["role"] == "user"
