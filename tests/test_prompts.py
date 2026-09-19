@@ -2,9 +2,13 @@ import os
 import sys
 import pytest
 
-# Enforce project root injection before pulling framework modules
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# Absolute path resolution mapping
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PARENT_DIR = os.path.dirname(CURRENT_DIR)
+if PARENT_DIR not in sys.path:
+    sys.path.insert(0, PARENT_DIR)
 
+# Directly pull from local folder path structure
 from core.prompts.template import PromptTemplate
 from core.exceptions import PromptTemplateError
 
